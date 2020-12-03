@@ -1,0 +1,52 @@
+
+
+
+/* !!!!!!!!! CREDITS TO HASAN HMEDEH !!!!!!!!! */
+
+
+
+body {
+ background-color: #FFFFFF;;
+ color: #003366;
+ font-family: "Verdana", Arial, sans-serif;
+}
+
+header{
+ background-color: #003366;
+ color: #AEC3E3;
+ font-family: "Georgia", Times New Roman;
+}
+
+h1 {
+ line-height: 200%;
+ text-indent: 1em;
+}
+
+nav{
+ font-weight: bold;
+}
+
+dt{
+ color: #5280C5;
+ font-size: 1.1em;
+ font-weight: bold;
+ font-weight: "Georgia", Times New Roman, serif;
+}
+
+.category{
+ font-weight: bold;
+ color: #5380C5;
+ font-family: "Georgia", Times New Roman, serif;
+}
+
+footer{
+ font-size: 0.70em;
+ font-style: italic;
+}
+
+#wrapper{
+ width: 80%;
+ margin-right: auto;
+ margin-left: auto;
+ background-color: #F0F0F0;
+}
