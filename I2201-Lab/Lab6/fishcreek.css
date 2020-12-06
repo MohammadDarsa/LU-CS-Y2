@@ -1,0 +1,79 @@
+
+
+
+/* CREDITS TO HASAN HMEDEH */
+
+
+
+body {
+    background-color: #FFFFFF;
+    color: #003366;
+    font-family: "Verdana", Arial, sans-serif;
+}
+
+header{
+    background-color: #003366;
+    color: #F0F0F0;
+    font-family: "Georgia", Times New Roman;
+    background-image: url(fishcreeklogo.gif);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 5px;
+    height: 70px;
+
+}
+
+h1 {
+    line-height: 250%;
+    text-indent: 1em;
+    margin-bottom: 0;
+}
+
+nav{
+    font-weight: bold;
+    text-align: center;
+    background-color: #5280C5;
+    padding: 5px;
+}
+
+dt{
+    color: #5280C5;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-weight: "Georgia", Times New Roman, serif;
+}
+
+.category{
+    font-weight: bold;
+    color: #5380C5;
+    font-family: "Georgia", Times New Roman, serif;
+    text-shadow: 1px 1px 1px #667;
+}
+
+footer{
+    font-size: 0.70em;
+			 font-style: italic;
+			 text-align: center;
+    background-color: #AEC3E3;
+}
+
+#wrapper{
+			 width: 80%;
+ 				margin-right: auto;
+ 				margin-left: auto;
+			 background-color: #F0F0F0;
+			 min-width: 700px;
+}
+
+img{
+    border: none;
+}
+
+main{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer nav{
+    background-color: #F0F0F0;
+}
