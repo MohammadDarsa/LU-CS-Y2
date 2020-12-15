@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 double evalHelper(double *x, int *arr, int n, double res) {
-    if(n == 0) return res + arr[0];
-    return evalHelper(x, arr, n-1, res + arr[n] * pow(*x, n));
+    if(n == 0) return res + *arr;
+    return evalHelper(x, arr, n-1, res + (*(arr+n) * pow(*x, n)));
 }
 
 double eval(double *x, int *arr, int n) {
