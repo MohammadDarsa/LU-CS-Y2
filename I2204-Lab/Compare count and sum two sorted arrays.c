@@ -5,12 +5,12 @@
 
 void compareNcount(int* arr1, int* arr2, int n, int m, int* sum,int* num) {
     if(n==0) return;
-    if(arr1[n-1] < arr2[m-1]) m--;
-    else if(arr1[n-1] > arr2[m-1]) {
-        (*sum) += arr1[n-1];
+    if(m == 0 || *(arr1+n-1) > *(arr2+m-1)) {
+        (*sum) += *(arr1+n-1);
         (*num)++;
         n--;
     }
+    else if(*(arr1+n-1) < *(arr2+m-1)) m--;
     else {m--; n--;}
     compareNcount(arr1, arr2, n, m, sum, num);
 }
