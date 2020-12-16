@@ -3,28 +3,16 @@
 #include <math.h>
 #include <stdlib.h>
 
-// Binary Search from the binary search exercise
-// Time complexity O(nlogm), I believe it can be O(n + m) but no one cares at this point.
-int binarySearchHelper(int arr[], int s, int e, int key) {
-    int mid = s + (e-s)/2;
-    if(s > e) return -1;
-    if(key == arr[mid]) return mid;
-    if(key > arr[mid]) return binarySearchHelper(arr, ++mid, e, key);
-    return binarySearchHelper(arr, s, --mid, key);
-}
-
-int binarySearch(int arr[], int n, int key) {
-    return binarySearchHelper(arr, 0, n-1, key);
-}
-
 void compareNcount(int* arr1, int* arr2, int n, int m, int* sum,int* num) {
     if(n==0) return;
-    int search = binarySearch(arr2, m, *(arr1+n-1));
-    if(search == -1) {
-        (*sum) += *(arr1+n-1);
+    if(arr1[n-1] < arr2[m-1]) m--;
+    else if(arr1[n-1] > arr2[m-1]) {
+        (*sum) += arr1[n-1];
         (*num)++;
+        n--;
     }
-    compareNcount(arr1, arr2, n-1, m, sum, num);
+    else {m--; n--;}
+    compareNcount(arr1, arr2, n, m, sum, num);
 }
 
 int main() {

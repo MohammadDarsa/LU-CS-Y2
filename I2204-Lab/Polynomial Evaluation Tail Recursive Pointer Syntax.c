@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+// hackerrank submission https://www.hackerrank.com/contests/i2204-lab-doreid/challenges/polynomial-evaluation-2/submissions/code/1328874688
+
 double evalHelper(double x, int *arr, int n, double res) {
     if(n == 0) return res + *(arr+n);
     return evalHelper(x, arr, n-1, x*(res + *(arr+n)));
