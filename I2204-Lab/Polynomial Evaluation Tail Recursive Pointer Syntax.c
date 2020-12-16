@@ -3,13 +3,13 @@
 #include <math.h>
 #include <stdlib.h>
 
-double evalHelper(double *x, int *arr, int n, double res, double p, int i) {
-    if(n <= i) return res + (*(arr+i) * p);
-    return evalHelper(x, arr, n, res + (*(arr+i) * p), p**x, i+1);
+double evalHelper(double x, int *arr, int n, double res) {
+    if(n == 0) return res + *(arr+n);
+    return evalHelper(x, arr, n-1, x*(res + *(arr+n)));
 }
 
-double eval(double *x, int *arr, int n) {
-    return evalHelper(x, arr, n, 0, 1, 0);
+double eval(double x, int *arr, int n) {
+    return evalHelper(x, arr, n, 0);
 }
 
 int main() {
@@ -20,7 +20,7 @@ int main() {
         if(x == 0.0 && n == -1) break;
         int arr[101];
         for(int i=0; i<n; i++) scanf("%d", arr+i);
-        printf("%.2lf\n", eval(&x, arr, n-1));
+        printf("%.2lf\n", eval(x, arr, n-1));
     } 
     
     return 0;
